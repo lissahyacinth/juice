@@ -1,6 +1,6 @@
 # Juice
 
-This is the workspace projet for 
+This is the workspace project for 
 
  * [juice](https://github.com/spearow/juice/blob/master/juice/README.md) - machine learning frameworks for hackers
  * [coaster](https://github.com/spearow/juice/blob/master/coaster/README.md) - underlying math abstraction
@@ -9,7 +9,7 @@ This is the workspace projet for
  * [greenglas](https://github.com/spearow/juice/blob/master/greenglas/README.md) - a data preprocessing framework
  * [juice-examples](https://github.com/spearow/juice/blob/master/juice-examples/README.md) - mnist demo
 
- Please conduct the individual README files for more information.
+ Please conduct the individual README.md files for more information.
 
 ## [Juice](https://github.com/spearow/juice) Examples
 
