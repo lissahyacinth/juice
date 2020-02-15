@@ -115,6 +115,11 @@ impl<T> NNOperationConfig<T> for helper::DropoutConfig
 impl<T> Convolution<T> for Backend<Native>
     where T: Add<T, Output = T> + Mul<T, Output = T> + Default + Copy
 {
+    /// Test
+    fn id_test(&self) {
+        unimplemented!()
+    }
+
     fn new_convolution_config(&self,
                               src: &SharedTensor<T>,
                               dest: &SharedTensor<T>,

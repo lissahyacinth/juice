@@ -327,6 +327,21 @@ mod tests {
     use super::super::FilterLayer;
     use crate::co::*;
 
+    #[cfg(feature = "cuda")]
+    fn cuda_backend() -> Backend<Cuda> {
+        let framework = Cuda::new();
+        let hardwares = framework.hardwares()[0..1].to_vec();
+        let backend_config = BackendConfig::new(framework, &hardwares);
+        Backend::new(backend_config).unwrap()
+    }
+
+    #[test]
+    #[cfg(feature = "cuda")]
+    fn cuda_idc() {
+        let cuda_backend : Backend<Cuda> = cuda_backend();
+        <Backend<Cuda> as conn::Convolution<f32>>::id_test(&cuda_backend);
+    }
+
     #[test]
     #[cfg(feature="cuda")]
     fn correct_shapes() {

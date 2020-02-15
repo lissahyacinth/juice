@@ -364,6 +364,12 @@ impl<T> ConvolutionConfig<T> for crate::cudnn::utils::ConvolutionConfig
 impl<T> Convolution<T> for Backend<Cuda>
     where T: Float + DataTypeInfo
 {
+    /// Test
+    fn id_test(&self) {
+        let x = CUDNN.id_c();
+        drop(x);
+    }
+
     fn new_convolution_config(&self,
                               src: &SharedTensor<T>,
                               dest: &SharedTensor<T>,

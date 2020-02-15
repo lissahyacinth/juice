@@ -269,6 +269,9 @@ pub trait TanhPointwise<F> : NN<F> {
 
 /// Provides the functionality for a Backend to support Convolution operations.
 pub trait Convolution<F> : NN<F> {
+    /// Test
+    fn id_test(&self);
+
     /// Creates a new ConvolutionConfig, which needs to be passed to further
     /// convolution Operations.
     fn new_convolution_config(&self,
